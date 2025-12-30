@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f9dfdf;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 50px;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0ea') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F5AFAF;
+    margin-top: 80px;
+}
+
+.hero h2 {
+    font-size: 60px;
+}
+
+/* SECTION */
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 80px 0 20px;
+}
+
+/* CONTAINERS */
+.about-container,
+.book-container,
+.feedback-container,
+.cart-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+/* CARDS */
+.about{
+    background:#d05a7c;
+    padding:30px;
+    font-size: 20px;
+
+}
+.book,
+.feedback,
+.cart {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.book:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGES */
+.book img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* CART BUTTON */
+.cart-btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: #ff9800;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
+    background: #e68900;
+}
+/*Review section*/
+.review-box{
+    background:white;
+    gap:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.review{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    gap:20px;
+}
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+}

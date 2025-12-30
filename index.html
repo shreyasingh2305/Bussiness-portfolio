@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BookaHolic</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>BookaHolic</h1>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#books">Books</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+    <a href="#review">Review</a>
+    <a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h2>Welcome to BookaHolic</h2>
+</section>
+<!-- ABOUT US -->
+<h2 class="section-title" id="about">About Us</h2>
+<div class ="about-container">
+    <div class="about">
+        <p>At BookaHolic, we are passionate about books and dedicated to providing a diverse selection of literature to our customers. Whether you're a fan of fiction, mystery, science, or romance, we have something for every reader. Our mission is to foster a love for reading by offering quality books at affordable prices. Join us on this literary journey and discover your next favorite book!</p>
+    </div>
+    <div class="about">
+        <p>Reading book can be a way to escape from real world and spend some time with your mind aand soul.And we are here to help you find the perfect book for your journey.</p>
+    </div>
+</div>
+
+
+<!-- POPULAR BOOKS -->
+<h2 class="section-title" id="books">Popular Books</h2>
+<div class="book-container">
+<div class="book">
+<img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da" />
+<h3>Mindset Mastery</h3>
+<p>Cost: ₹280</p>
+<button class="cart-btn" onclick="addToCart('Mindset Mastery',280)">Add to Cart</button>
+</div>
+
+<div class="book">
+<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" />
+<h3>The Lost Kingdom</h3>
+<p>Cost: ₹450</p>
+<button class="cart-btn" onclick="addToCart('The Lost Kingdom',450)">Add to Cart</button>
+</div>
+<div class="book"> 
+    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=60" />
+     <h3>Science Wonders</h3> 
+     <p>A fascinating book exploring scientific miracles.</p> 
+     <p><strong>Cost:</strong> ₹350</p> 
+     <button class="cart-btn" onclick="addToCart('Science Wonders', 350)"> 
+        Add to Cart
+     </button> 
+    </div>
+    <div class="book"> 
+        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=60" />
+         <h3>Romance of Dreams</h3>
+          <p>A heartwarming love story full of emotions.</p> 
+          <p><strong>Cost:</strong> ₹299</p> 
+           <button class="cart-btn" onclick="addToCart('Romance of Dreams', 299)"> Add to Cart 
+           </button> 
+    </div>
+ <div class="book"> <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?auto=format&fit=crop&w=800&q=60" />
+     <h3>Tech Titans</h3> 
+     <p>A deep dive into the world of technology and innovation.</p>
+      <p><strong>Cost:</strong> ₹500</p> 
+      <button class="cart-btn" onclick="addToCart('Tech Titans', 500)"> Add to Cart 
+      </button> 
+</div>
+</div>
+<!-- FICTION -->
+<h2 class="section-title">Fiction</h2>
+<div class="book-container">
+<div class="book">
+<img src="https://www.bookgeeks.in/wp-content/uploads/2023/04/It-Ends-With-Us-by-Colleen-Hoover-Book-691x1024.jpg">
+<h3>It Ends With Us</h3>
+<p>Cost: ₹380</p>
+<button class="cart-btn" onclick="addToCart('It Ends With Us',380)">Add to Cart</button>
+</div>
+<div class="book">
+     <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1672676191i/75513900.jpg" />
+      <h3>Powerless-Lauren Roberts</h3> 
+      <p>An epic tale of ancient civilizations and hidden secrets.</p> 
+      <p><strong>Cost:</strong> ₹350</p>
+        
+       <button class="cart-btn" onclick="addToCart('Powerless-Lauren Roberts', 350)"> 
+        Add to Cart 
+    </button> 
+    </div>
+    <div class="book"> 
+        <img src="https://m.media-amazon.com/images/I/51OleTwuSIL._SL500_.jpg" /> 
+        <h3>The Great Indian Novel-Shashi Tharoor</h3> 
+        <p>A fascinating book about Indian Heritage.</p> 
+        <p><strong>Cost:</strong> ₹380</p>
+        <button class="cart-btn" onclick="addToCart('The Great Indian Novel-Shashi Tharoor', 380)"> Add to Cart 
+        </button>
+</div>
+</div>
+
+<!-- MYSTERY -->
+<h2 class="section-title">Mystery</h2>
+<div class="book-container">
+<div class="book">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAdUqPEAJxm0MujxqyYK-GNQh0hoeJpc-FA">
+<h3>Verity</h3>
+<p>Cost: ₹630</p>
+<button class="cart-btn" onclick="addToCart('Verity',630)">Add to Cart</button>
+</div>
+<div class="book">
+     <img src="https://m.media-amazon.com/images/I/71JBkFQz5TL._AC_UF1000,1000_QL80_.jpg" /> 
+     <h3>The Mystery Omnibus </h3> <p>It brings together a wide range of Ruskin Bond’s eeriest stories in one volume.</p>
+      <p><strong>Cost:</strong> ₹300</p>
+       
+       <button class="cart-btn" onclick="addToCart('The Mystery Omnibus', 300)"> Add to Cart
+         </button>
+         </div>
+         <div class="book"> 
+            <img src="https://m.media-amazon.com/images/I/51OleTwuSIL._SL500_.jpg" /> 
+            <h3>The Book of Mysteries eBook-J.R. Wallis</h3>
+             <p>Dive into a world of magic in an adventure perfect for fans of Abi Elphinstone, Jonathan Stroud and J.K. Rowling.</p> 
+             <p><strong>Cost:</strong> ₹380</p>
+        
+              <button class="cart-btn" onclick="addToCart('The Book of Mysteries eBook-J.R. Wallis', 380)"> Add to Cart 
+              </button> 
+            </div>
+</div>
+
+<!-- FEEDBACK -->
+<h2 class="section-title" id="feedback">Customer Feedback</h2>
+<div class="feedback-container">
+<div class="feedback">
+<h3> Ananya Sharma</h3>
+<p>Amazing collection!   ⭐⭐⭐⭐⭐</p>
+</div>
+<div class="feedback">
+<h3> Rahul Verma</h3>
+<p>Clean UI and good prices.  ⭐⭐⭐⭐☆ </p>
+</div>
+<div class="feedback">
+    <h3>Aastha Patil</h3>
+    <p>Great variety and affordable prices.  ⭐⭐⭐⭐⭐</p>
+
+</div>
+</div>
+
+<!-- CART -->
+<h2 class="section-title" id="cart">Your Cart</h2>
+<div class="cart-container">
+<div class="cart">
+<ul id="cart-items"></ul>
+<p><strong>Total: ₹<span id="total">0</span></strong></p>
+</div>
+</div>
+<!-- REVIEW -->
+<br>
+<br>
+<br>
+<div class="review-box">
+    <div class="review">
+    <h2>Leave a Review</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <textarea id="review" placeholder="Write your review..."></textarea>
+    <button onclick="submitReview()">Submit Review</button>
+
+    <p id="message"></p>
+
+    <h3>Reviews</h3>
+    <div id="reviewList"></div>
+    </div>
+</div>
+
+<footer id="contact">
+<p>Email: bookaholic@gmail.com</p>
+<p>© 2025 BookaHolic</p>
+</footer>
+<script src="script.js">  </script>
+</body>
+</html>
