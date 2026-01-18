@@ -16,7 +16,6 @@ function addToCart(name, price) {
     discountApplied = false; // reset coupon when new item added
     document.getElementById('coupon-msg').innerText = "";
 }
-
 function applyCoupon() {
     if (total < 2000) {
         document.getElementById('coupon-msg').innerText = "Coupon not available for orders below ₹2000";
@@ -36,35 +35,66 @@ function applyCoupon() {
     discountApplied = true;
 }
 
- //Review Form Submission 
 
-function submitReview() {
-    const name = document.getElementById("name").value.trim();
-    const review = document.getElementById("review").value.trim();
+
+ 
+            function validateFeedback() {
+    const email = document.getElementById("email").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const note = document.getElementById("note").value.trim();
     const message = document.getElementById("message");
-    const reviewList = document.getElementById("reviewList");
 
-    if (name === "" || review === "") {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const mobilePattern = /^[6-9]\d{9}$/;
+
+    // Empty check
+    if (email === "" || mobile === "" || note === "") {
         message.style.color = "red";
-        message.textContent = "Please enter your name and review.";
+        message.innerText = "All fields are required!";
         return;
     }
 
-    const div = document.createElement("div");
-    div.className = "review";
-    div.innerHTML = `<strong>${name}</strong><p>${review}</p>`;
+    // Email validation
+    if (!emailPattern.test(email)) {
+        message.style.color = "red";
+        message.innerText = "Please enter a valid email address!";
+        return;
+    }
 
-    reviewList.appendChild(div);
+    // Mobile number validation
+    if (!mobilePattern.test(mobile)) {
+        message.style.color = "red";
+        message.innerText = "Please enter a valid 10-digit mobile number!";
+        return;
+    }
 
+    // Success
     message.style.color = "green";
-    message.textContent = "Review submitted successfully!";
+    message.innerText = "Feedback submitted successfully! ✅";
 
-    document.getElementById("name").value = "";
-    document.getElementById("review").value = "";
+    // Optional: Save review to file
+    saveFile();
 
-    // Auto-hide message after 3 seconds
-    setTimeout(() => {
-        message.textContent = "";
-    }, 3000);
+    // Clear fields
+    /*document.getElementById("email").value = "";
+    document.getElementById("mobile").value = "";
+    document.getElementById("note").value = "";*/
+}
+function saveFile() {
+    const email = document.getElementById("email").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const note = document.getElementById("note").value.trim();
+
+    const content =
+        "Email: " + email + "\n" +
+        "Mobile: " + mobile + "\n\n" +
+        "Review Message:\n" +
+        note;
+
+    const blob = new Blob([content], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "feedback.txt";
+    link.click();
 }
 
