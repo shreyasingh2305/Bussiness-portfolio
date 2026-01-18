@@ -20,6 +20,7 @@
     <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
     <a href="#review">Review</a>
     <a href="#contact">Contact</a>
+    
 </nav>
 </header>
 
@@ -33,7 +34,7 @@
         <p>At BookaHolic, we are passionate about books and dedicated to providing a diverse selection of literature to our customers. Whether you're a fan of fiction, mystery, science, or romance, we have something for every reader. Our mission is to foster a love for reading by offering quality books at affordable prices. Join us on this literary journey and discover your next favorite book!</p>
     </div>
     <div class="about">
-        <p>Reading book can be a way to escape from real world and spend some time with your mind aand soul.And we are here to help you find the perfect book for your journey.</p>
+        <p>Reading book can be a way to escape from real world and spend some time with your mind and soul.And we are here to help you find the perfect book for your journey.</p>
     </div>
 </div>
 
@@ -126,7 +127,7 @@
          </button>
          </div>
          <div class="book"> 
-            <img src="https://m.media-amazon.com/images/I/51OleTwuSIL._SL500_.jpg" /> 
+            <img src="https://m.media-amazon.com/images/I/91EPp7IplBL._UF1000,1000_QL80_.jpg" /> 
             <h3>The Book of Mysteries eBook-J.R. Wallis</h3>
              <p>Dive into a world of magic in an adventure perfect for fans of Abi Elphinstone, Jonathan Stroud and J.K. Rowling.</p> 
              <p><strong>Cost:</strong> ₹380</p>
@@ -164,26 +165,27 @@
 <p id="coupon-msg" style="color: rgb(225, 90, 113);"></p>
 </div>
 </div>
+<br>
 <!-- REVIEW -->
 <br>
 <br>
 <br>
+<h2 class="section-title" id="review">Review</h2>
 <div class="review-box">
     <div class="review">
     <h2>Leave a Review</h2>
-    <input type="text" id="name" placeholder="Your Name">
-    <textarea id="review" placeholder="Write your review..."></textarea>
-    <button onclick="submitReview()">Submit Review</button>
-
+    <input type="email" id="email" placeholder="enter your email">
+    <input type="text" id="mobile" placeholder="Enter phone number">
+    <textarea id="note" rows="10" cols="50" placeholder="Write something here..."></textarea><br><br>
+    <button type ="button" onclick="validateFeedback()">Submit</button>
     <p id="message"></p>
-
-    <h3>Reviews</h3>
-    <div id="reviewList"></div>
+  <input type="file" id="fileInput" accept=".txt" onchange="loadFile(event)">
     </div>
 </div>
 
 <footer id="contact">
 <p>Email: bookaholic@gmail.com</p>
+<p>Contact: +91 12345 67890</p>
 <p>© 2025 BookaHolic</p>
 </footer>
 <script src="script.js">  </script>
